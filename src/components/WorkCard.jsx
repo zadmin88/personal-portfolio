@@ -13,8 +13,10 @@ function WorkCard({ project }) {
         </button>
       </div>
       <div className="flex justify-between text-stone-200 items-center">
-        <h2 className="text-3xl font-semibold w-1/2 ">{project?.name}</h2>
-        <p className="font-extraligth text-base w-1/2 ">
+        <h2 className="text-xl md:text-3xl font-semibold w-1/2 place-self-start">
+          {project?.name}
+        </h2>
+        <p className="font-extraligth text-sm md:text-base w-1/2 ">
           {project?.shortDescription}
         </p>
       </div>

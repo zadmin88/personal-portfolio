@@ -4,13 +4,15 @@ const Container = ({ children }) => {
   return (
     <div
       className="
-
-        max-w-[2520px]        
-        mx-auto
+        max-w-[2520px]
+        w-screen        
+        md:mx-auto
         xl:px-20 
         md:px-10
-        sm:px-2
-        bg-zinc-900
+        sm:px-8
+        px-4
+        dark:bg-zinc-900
+        bg-stone-200
 
       "
     >

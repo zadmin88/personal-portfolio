@@ -4,7 +4,6 @@ import WorkCardsGrid from "../components/WorkCardsGrid";
 import Container from "../components/Container";
 import Profile from "../components/Profile";
 import Contact from "../components/Contact";
-import Footer from "../components/Footer";
 
 const Home = () => {
   const testProjects = [
@@ -36,7 +35,6 @@ const Home = () => {
       <AboutHero />
       <Profile />
       <Contact />
-      <Footer />
     </Container>
   );
 };

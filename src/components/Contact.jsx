@@ -1,8 +1,11 @@
 const Contact = () => {
   return (
-    <div className="flex flex-col py-48 items-center justify-center gap-24">
+    <div
+      id="contact"
+      className="flex font-Monserrat flex-col py-48 md:items-center justify-center gap-24"
+    >
       <h1 className="text-stone-200 text-8xl font-semibold">LET&apos;S TALK</h1>
-      <div className="flex gap-32">
+      <div className="flex flex-col md:flex-row gap-10 md:gap-32">
         <div className="text-stone-200 text-2xl italic font-extralight w-full">
           <h2 className=" border-b pb-2">zaimon88@gmail.com</h2>
           <h2 className="pt-4">+ 57 3007921148</h2>
