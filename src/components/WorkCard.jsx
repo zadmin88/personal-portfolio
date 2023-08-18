@@ -8,11 +8,11 @@ function WorkCard({ project }) {
           src="./images/testWorkCard.png"
           alt="Work card"
         />
-        <button className="bg-lime-300 rounded-full py-3 px-4 font-semibold absolute bottom-6 right-6 hover:bg-lime-200">
+        <button className="dark:bg-lime-300 bg-lime-500 rounded-full py-3 px-4 font-semibold absolute bottom-6 right-6 hover:bg-lime-200">
           Learn more
         </button>
       </div>
-      <div className="flex justify-between text-stone-200 items-center">
+      <div className="flex justify-between dark:text-stone-200 text-zinc-900 items-center">
         <h2 className="text-xl md:text-3xl font-semibold w-1/2 place-self-start">
           {project?.name}
         </h2>

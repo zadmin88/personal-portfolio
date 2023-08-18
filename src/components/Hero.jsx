@@ -9,7 +9,7 @@ const Hero = () => {
           SOFTWARE <br />
           DEVELOPER
         </h1>
-        <p className="text-lime-300 text-xl md:text-2xl tracking-widest">
+        <p className="dark:text-lime-300 text-lime-500 text-xl md:text-2xl tracking-widest">
           FRONTEND - FULL STACK CAPABLE
         </p>
       </div>

@@ -1,10 +1,12 @@
 import Container from "./Container";
 import useMenuModal from "../hooks/useMenuModal";
+import useDarkMode from "../hooks/useDarkMode";
 import { useState, useEffect } from "react";
 
 const MenuModal = () => {
   const menuModal = useMenuModal();
   const [showMenu, setShowMenu] = useState(menuModal.isOpen);
+  const { isDark, toggleDarkMode } = useDarkMode((state) => state);
 
   useEffect(() => {
     setShowMenu(menuModal.isOpen);
@@ -23,7 +25,7 @@ const MenuModal = () => {
 
   return (
     <div
-      className={`fixed pt-14 font-Monserrat  bg-zinc-900 z-40 translate
+      className={`fixed pt-14 font-Monserrat bg-stone-300 dark:bg-zinc-900 z-40 translate
       duration-300
       h-20
       ${showMenu ? "-translate-y-0" : "-translate-y-full"}
@@ -35,13 +37,13 @@ const MenuModal = () => {
             className="
               flex 
               items-center 
-              justify-between
+              justify-center
               md:gap-3
               md:hidden
               
             "
           >
-            <ul className="flex gap-4 items-center justify-between text-xs text-stone-200 py-4">
+            <ul className="flex gap-4 items-center justify-between text-xs dark:text-stone-200 text-zinc-900 py-4">
               <li
                 className="cursor-pointer tracking-widest"
                 onClick={() => handleClickScroll("work")}
@@ -60,7 +62,10 @@ const MenuModal = () => {
               >
                 CONTACT
               </li>
-              <li className="cursor-pointer pt-1">
+              <li
+                onClick={() => toggleDarkMode(isDark)}
+                className="cursor-pointer pt-1"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="32"
@@ -72,8 +77,8 @@ const MenuModal = () => {
                     cx="8"
                     cy="8"
                     r="7.75"
-                    fill="#E8E8E8"
-                    stroke="#E8E8E8"
+                    fill="#E7E5E4"
+                    stroke="#18181B"
                     strokeWidth="0.5"
                   />
                   <circle
@@ -81,6 +86,7 @@ const MenuModal = () => {
                     cy="8"
                     r="7.75"
                     stroke="#E8E8E8"
+                    fill="#18181B"
                     strokeWidth="0.5"
                   />
                 </svg>

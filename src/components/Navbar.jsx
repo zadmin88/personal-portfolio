@@ -3,12 +3,14 @@ import { useNavigate } from "react-router-dom";
 import TextSpan from "./TextSpan";
 import { IoMenuOutline } from "react-icons/io5";
 import useMenuModal from "../hooks/useMenuModal";
+import useDarkMode from "../hooks/useDarkMode";
 
 // import IoMenu from "react-icons/io";
 
 const Navbar = () => {
   const navigate = useNavigate();
   const menuModal = useMenuModal();
+  const { toggleDarkMode, isDark } = useDarkMode((state) => state);
 
   const wordToSpan = (word) => word.split("");
   const handleClickScroll = (id) => {
@@ -73,7 +75,10 @@ const Navbar = () => {
                   <TextSpan key={idx}>{letter}</TextSpan>
                 ))}
               </li>
-              <li className="cursor-pointer pt-1">
+              <li
+                onClick={() => toggleDarkMode(isDark)}
+                className="cursor-pointer pt-1"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="32"
@@ -85,8 +90,8 @@ const Navbar = () => {
                     cx="8"
                     cy="8"
                     r="7.75"
-                    fill="#E8E8E8"
-                    stroke="#E8E8E8"
+                    fill="#E7E5E4"
+                    stroke="#18181B"
                     strokeWidth="0.5"
                   />
                   <circle
@@ -94,6 +99,7 @@ const Navbar = () => {
                     cy="8"
                     r="7.75"
                     stroke="#E8E8E8"
+                    fill="#18181B"
                     strokeWidth="0.5"
                   />
                 </svg>
@@ -114,13 +120,13 @@ const Navbar = () => {
           >
             <h1
               onClick={handleHome}
-              className="text-stone-200 tracking-widest   font-extralight text-2xl cursor-pointer"
+              className="dark:text-stone-200 text-zinc-900 tracking-widest   font-extralight text-2xl cursor-pointer"
             >
               Simón Franco
             </h1>
 
             <button
-              className="text-stone-200"
+              className="dark:text-stone-200 text-zinc-900"
               onClick={() => menuModal.toggleMenu(menuModal.isOpen)}
             >
               <IoMenuOutline className="h-8 w-8" />
