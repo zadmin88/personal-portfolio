@@ -4,34 +4,14 @@ import WorkCardsGrid from "../components/WorkCardsGrid";
 import Container from "../components/Container";
 import Profile from "../components/Profile";
 import Contact from "../components/Contact";
+import useWork from "../hooks/useWork";
 
 const Home = () => {
-  const testProjects = [
-    {
-      name: "Montanera",
-      shortDescription:
-        "Hi. I'm Simon a software developer with a passion for building great digital experiences.",
-    },
-    {
-      name: "MMyMoney Webapp",
-      shortDescription:
-        "Hi. I'm Simon a software developer with a passion for building great digital experiences.",
-    },
-    {
-      name: "This portfolio",
-      shortDescription:
-        "Hi. I'm Simon a software developer with a passion for building great digital experiences.",
-    },
-    {
-      name: "anything else",
-      shortDescription:
-        "Hi. I'm Simon a software developer with a passion for building great digital experiences.",
-    },
-  ];
+  const { getAll } = useWork();
   return (
     <Container>
       <Hero />
-      <WorkCardsGrid projects={testProjects} />
+      <WorkCardsGrid projects={getAll()} />
       <AboutHero />
       <Profile />
       <Contact />

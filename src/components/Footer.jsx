@@ -18,7 +18,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="font-Monserrat bg-stone-200 text-zinc-900 dark:bg-zinc-900 dark:text-stone-200 h-full w-full md:w-screen">
+    <div className="relative bottom-0 font-Monserrat bg-stone-200 text-zinc-900 dark:bg-zinc-900 dark:text-stone-200 h-20 w-full md:w-screen">
       <div className="py-6">
         <Container>
           <div

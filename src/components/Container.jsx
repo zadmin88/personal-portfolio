@@ -13,7 +13,7 @@ const Container = ({ children }) => {
         px-4
         dark:bg-zinc-900
         bg-stone-200
-
+        h-full
       "
     >
       {children}
