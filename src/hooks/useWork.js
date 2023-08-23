@@ -2,7 +2,12 @@ const testProjects = [
   {
     id: "1",
     heroUrl: "/images/work/montanera/heroMontanera.png",
-    cardUrl: "/images/work/montanera/testWorkCard.png",
+    cardUrl: [
+      "/images/work/montanera/slideOne.png",
+      "/images/work/montanera/slideTwo.png",
+      "/images/work/montanera/slideThree.png",
+    ],
+    videoURL: true,
     approachSrc: "/images/work/montanera/approachImage.png",
     name: "LA MONTAÑERA",
     subtitle: "YEAR: 2019 / ROLE: FULLSTACK",
@@ -29,8 +34,12 @@ const testProjects = [
   },
   {
     id: "2",
-    heroUrl: "/images/work/montanera/heromontanera.png",
-    cardUrl: "/images/work/montanera/testWorkCard.png",
+    heroUrl: "/images/work/mymoney/heroMymoney.png",
+    cardUrl: [
+      "/images/work/mymoney/slideOne.png",
+      "/images/work/mymoney/slideTwo.png",
+    ],
+    approachSrc: "/images/work/mymoney/approachImage.gif",
     name: "MyMoney",
     subtitle: "YEAR: 2022 / ROL: FULLSTACK",
     shortDescription:

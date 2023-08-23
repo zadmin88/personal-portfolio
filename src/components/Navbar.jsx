@@ -1,9 +1,12 @@
 import Container from "./Container";
 import { useNavigate } from "react-router-dom";
-import TextSpan from "./TextSpan";
+// import TextSpan from "./animations/TextSpan";
+import WordAnimation from "./animations/WordAnimation";
 import { IoMenuOutline } from "react-icons/io5";
 import useMenuModal from "../hooks/useMenuModal";
 import useDarkMode from "../hooks/useDarkMode";
+import WavyText from "./animations/WavyText";
+import { useState } from "react";
 
 // import IoMenu from "react-icons/io";
 
@@ -11,8 +14,8 @@ const Navbar = () => {
   const navigate = useNavigate();
   const menuModal = useMenuModal();
   const { toggleDarkMode, isDark } = useDarkMode((state) => state);
+  const [replay, setReplay] = useState(true);
 
-  const wordToSpan = (word) => word.split("");
   const handleClickScroll = (id) => {
     const element = document.getElementById(id);
 
@@ -26,6 +29,14 @@ const Navbar = () => {
     navigate("/");
     handleClickScroll("top");
   };
+
+  const onHover = () => {
+    console.log(replay);
+    setReplay(!replay);
+    setTimeout(() => setReplay(true), 200);
+  };
+
+  <WavyText text="Awesome Wavy Text!" replay={replay} />;
 
   return (
     <div className=" fixed font-Monserrat h-20 bg-stone-200 dark:bg-zinc-900 z-50">
@@ -55,25 +66,26 @@ const Navbar = () => {
                 className="cursor-pointer tracking-widest"
                 onClick={() => handleClickScroll("work")}
               >
-                {wordToSpan("WORK").map((letter, idx) => (
-                  <TextSpan key={idx}>{letter}</TextSpan>
-                ))}
+                <WavyText
+                  text="WORK"
+
+                  // onHover={() => setReplay(!replay)}
+                />
+                {/* <WordAnimation>WORK</WordAnimation> */}
               </li>
               <li
                 className="cursor-pointer tracking-widest"
                 onClick={() => handleClickScroll("profile")}
               >
-                {wordToSpan("ABOUT ME").map((letter, idx) => (
-                  <TextSpan key={idx}>{letter}</TextSpan>
-                ))}
+                <WavyText text="ABOUT ME" />
+                {/* <WordAnimation>ABOUT ME</WordAnimation> */}
               </li>
               <li
                 className="cursor-pointer tracking-widest"
                 onClick={() => handleClickScroll("contact")}
               >
-                {wordToSpan("CONTACT").map((letter, idx) => (
-                  <TextSpan key={idx}>{letter}</TextSpan>
-                ))}
+                <WavyText text="CONTACT" />
+                {/* <WordAnimation>CONTACT</WordAnimation> */}
               </li>
               <li
                 onClick={() => toggleDarkMode(isDark)}

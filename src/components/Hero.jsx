@@ -1,3 +1,5 @@
+import LoopingTextAnimation from "./animations/LoopingTextAnimation";
+
 const Hero = () => {
   return (
     <div
@@ -9,9 +11,11 @@ const Hero = () => {
           SOFTWARE <br />
           DEVELOPER
         </h1>
-        <p className="dark:text-lime-300 text-lime-500 text-xl md:text-2xl tracking-widest">
-          FRONTEND - FULL STACK CAPABLE
-        </p>
+
+        <LoopingTextAnimation
+          text={`\u00A0FRONTEND - FULL STACK CAPABLE - FRONTEND - FULL STACK CAPABLE - FRONTEND - FULL STACK CAPABLE -`}
+          speed={10}
+        />
       </div>
     </div>
   );

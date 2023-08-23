@@ -7,7 +7,8 @@ const WorkHero = ({ img, name, subtitle }) => {
         alt="Hero"
         className=" aspect-square  md:inset-0 md:w-full md:h-full object-cover"
       />
-      <div className="absolute  top-2/3 md:top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 text-center w-full">
+      {/* <div className="bg-opacity-20 dark:bg-opacity-10 bg-black"></div> */}
+      <div className="absolute z-40 top-2/3 md:top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 text-center w-full">
         <h1 className="text-3xl md:text-7xl font-bold text-white tracking-widest">
           {name}
         </h1>
@@ -15,6 +16,7 @@ const WorkHero = ({ img, name, subtitle }) => {
           {subtitle}
         </h3>
       </div>
+      <div className="absolute inset-0 bg-black opacity-75"></div>
     </div>
   );
 };

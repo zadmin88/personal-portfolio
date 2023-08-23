@@ -1,5 +1,25 @@
+// import {
+//   Animator,
+//   ScrollPage,
+//   batch,
+//   Fade,
+//   FadeUp,
+//   FadeIn,
+//   FadeOut,
+//   Move,
+//   MoveIn,
+//   MoveOut,
+//   Sticky,
+//   StickyIn,
+//   StickyOut,
+//   Zoom,
+//   ZoomIn,
+//   ZoomOut,
+// } from "react-scroll-motion";
+
 const AboutHero = () => {
   return (
+    // <ScrollPage>
     <div
       id="profile"
       className="flex  font-Monserrat flex-col md:flex-row bg-stone-200 dark:bg-zinc-900 md:px-32 md:py-20 max-h-[800px] items-center justify-center z-0"
@@ -11,6 +31,7 @@ const AboutHero = () => {
           <div className="  bg-opacity-20 dark:bg-opacity-10 bg-black"></div>
         </div>
         {/* Large screens */}
+
         <div className="dark:text-stone-200 text-zinc-900 px-6 lg:px-0  lg:absolute  lg:left-[370px] z-40 hidden md:block ">
           <p className=" flex flex-col gap-4 text-4xl md:text-6xl font-semibold mb-4 ">
             <span>Hello.</span>
@@ -31,6 +52,7 @@ const AboutHero = () => {
             <span>digital experiences.</span>
           </p>
         </div>
+
         {/* Small screens */}
         <div className="dark:text-stone-200 text-zinc-900 px-6 lg:px-0 relative -top-[130px]  lg:absolute  lg:left-[370px]  md:hidden">
           <p className=" flex flex-col gap-1 text-4xl md:text-6xl font-semibold mb-4 ">
@@ -59,6 +81,7 @@ const AboutHero = () => {
         <div className=" bg-opacity-75 dark:bg-opacity-10 dark:bg-black"></div>
       </div>
     </div>
+    // </ScrollPage>
   );
 };
 
