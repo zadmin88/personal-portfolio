@@ -5,6 +5,8 @@ import WorkHero from "../components/Work/WorkHero";
 import Description from "../components/Work/Description";
 import Summary from "../components/Work/Summary";
 import Approach from "../components/Work/Approach";
+import ImageCarousel from "../components/ImageCarousel";
+
 const Work = () => {
   const { getById } = useWork();
   const params = useParams();
@@ -26,6 +28,7 @@ const Work = () => {
         stackUsed={project.stackUsed}
       />
       <Approach src={project.approachSrc} approach={project.approach} />
+      <ImageCarousel images={project.sliderImages} />
     </Container>
   );
 };

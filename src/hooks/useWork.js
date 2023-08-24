@@ -7,8 +7,26 @@ const testProjects = [
       "/images/work/montanera/slideTwo.png",
       "/images/work/montanera/slideThree.png",
     ],
+    sliderImages: [
+      {
+        original: "/images/work/montanera/sliderOne.png",
+        thumbnail: "/images/work/montanera/sliderOne.png",
+      },
+      {
+        original: "/images/work/montanera/sliderTwo.png",
+        thumbnail: "/images/work/montanera/sliderTwo.png",
+      },
+      {
+        original: "/images/work/montanera/sliderThree.png",
+        thumbnail: "/images/work/montanera/sliderThree.png",
+      },
+      {
+        original: "/images/work/montanera/sliderFour.png",
+        thumbnail: "/images/work/montanera/sliderFour.png",
+      },
+    ],
     videoURL: true,
-    approachSrc: "/images/work/montanera/approachImage.png",
+    approachSrc: "/images/work/montanera/approachImage.gif",
     name: "LA MONTAÑERA",
     subtitle: "YEAR: 2019 / ROLE: FULLSTACK",
     shortDescription:
@@ -38,6 +56,32 @@ const testProjects = [
     cardUrl: [
       "/images/work/mymoney/slideOne.png",
       "/images/work/mymoney/slideTwo.png",
+    ],
+    sliderImages: [
+      {
+        original: "/images/work/mymoney/sliderOne.png",
+        thumbnail: "/images/work/mymoney/sliderOne.png",
+      },
+      {
+        original: "/images/work/mymoney/sliderTwo.png",
+        thumbnail: "/images/work/mymoney/sliderTwo.png",
+      },
+      {
+        original: "/images/work/mymoney/sliderThree.png",
+        thumbnail: "/images/work/mymoney/sliderThree.png",
+      },
+      {
+        original: "/images/work/mymoney/sliderFour.png",
+        thumbnail: "/images/work/mymoney/sliderFour.png",
+      },
+      {
+        original: "/images/work/mymoney/sliderFive.png",
+        thumbnail: "/images/work/mymoney/sliderFive.png",
+      },
+      {
+        original: "/images/work/mymoney/sliderSix.png",
+        thumbnail: "/images/work/mymoney/sliderSix.png",
+      },
     ],
     approachSrc: "/images/work/mymoney/approachImage.gif",
     name: "MyMoney",

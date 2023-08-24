@@ -1,12 +1,13 @@
 import Container from "./Container";
 import useMenuModal from "../hooks/useMenuModal";
-import useDarkMode from "../hooks/useDarkMode";
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import ToggleDarkmode from "./ToggleDarkmode";
 
 const MenuModal = () => {
   const menuModal = useMenuModal();
+  const location = useLocation();
   const [showMenu, setShowMenu] = useState(menuModal.isOpen);
-  const { isDark, toggleDarkMode } = useDarkMode((state) => state);
 
   useEffect(() => {
     setShowMenu(menuModal.isOpen);
@@ -43,56 +44,55 @@ const MenuModal = () => {
               
             "
           >
-            <ul className="flex gap-4 items-center justify-between text-xs dark:text-stone-200 text-zinc-900 py-4">
-              <li
-                className="cursor-pointer tracking-widest"
-                onClick={() => handleClickScroll("work")}
-              >
-                WORK
-              </li>
-              <li
-                className="cursor-pointer tracking-widest"
-                onClick={() => handleClickScroll("profile")}
-              >
-                ABOUT ME
-              </li>
-              <li
-                className="cursor-pointer tracking-widest"
-                onClick={() => handleClickScroll("contact")}
-              >
-                CONTACT
-              </li>
-              <li
-                onClick={() => toggleDarkMode(isDark)}
-                className="cursor-pointer pt-1"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="16"
-                  viewBox="0 0 32 16"
-                  fill="none"
+            {location.pathname !== "/" ? (
+              <ul className="flex gap-4 items-center justify-between text-xs dark:text-stone-200 text-zinc-900 py-4">
+                <li
+                  className="cursor-pointer tracking-widest"
+                  onClick={() => handleClickScroll("description")}
                 >
-                  <circle
-                    cx="8"
-                    cy="8"
-                    r="7.75"
-                    fill="#E7E5E4"
-                    stroke="#18181B"
-                    strokeWidth="0.5"
-                  />
-                  <circle
-                    cx="24"
-                    cy="8"
-                    r="7.75"
-                    stroke="#E8E8E8"
-                    fill="#18181B"
-                    strokeWidth="0.5"
-                  />
-                </svg>
-              </li>
-              <li className="cursor-pointer tracking-widest ">EN/ES</li>
-            </ul>
+                  DESCRIPTION
+                </li>
+                <li
+                  className="cursor-pointer tracking-widest"
+                  onClick={() => handleClickScroll("approach")}
+                >
+                  APPROACH
+                </li>
+                <li
+                  className="cursor-pointer tracking-widest"
+                  onClick={() => handleClickScroll("screenshots")}
+                >
+                  SCREENSHOTS
+                </li>
+                <li className="cursor-pointer pt-1">
+                  <ToggleDarkmode />
+                </li>
+              </ul>
+            ) : (
+              <ul className="flex gap-4 items-center justify-between text-xs dark:text-stone-200 text-zinc-900 py-4">
+                <li
+                  className="cursor-pointer tracking-widest"
+                  onClick={() => handleClickScroll("work")}
+                >
+                  WORK
+                </li>
+                <li
+                  className="cursor-pointer tracking-widest"
+                  onClick={() => handleClickScroll("profile")}
+                >
+                  ABOUT ME
+                </li>
+                <li
+                  className="cursor-pointer tracking-widest"
+                  onClick={() => handleClickScroll("contact")}
+                >
+                  CONTACT
+                </li>
+                <li className="cursor-pointer pt-1">
+                  <ToggleDarkmode />
+                </li>
+              </ul>
+            )}
           </div>
         </Container>
       </div>
