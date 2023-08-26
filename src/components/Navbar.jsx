@@ -31,7 +31,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className=" fixed font-Monserrat h-20 bg-stone-200 dark:bg-zinc-900 z-50">
+    <div className=" fixed  font-Monserrat h-20 bg-stone-200 dark:bg-zinc-900 z-50">
       <div className="py-6">
         <Container>
           {/* Large Screens */}

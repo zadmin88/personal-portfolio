@@ -4,7 +4,7 @@ const Container = ({ children }) => {
   return (
     <div
       className="
-        max-w-[2520px]
+      
         w-screen        
         md:mx-auto
         xl:px-20 
