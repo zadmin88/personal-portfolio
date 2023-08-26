@@ -3,7 +3,11 @@ import "react-image-gallery/styles/css/image-gallery.css";
 
 // eslint-disable-next-line react/prop-types
 const ImageCarousel = ({ images }) => {
-  return <ImageGallery items={images} />;
+  return (
+    <div id="screenshots">
+      <ImageGallery items={images} />
+    </div>
+  );
 };
 
 export default ImageCarousel;

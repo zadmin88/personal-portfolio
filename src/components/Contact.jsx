@@ -14,9 +14,15 @@ const Contact = () => {
         </div>
         <div className="dark:text-stone-200 text-zinc-900 text-xl font-italic">
           <ul className="flex flex-col gap-4">
-            <li className="cursor-pointer">LinkedIn</li>
-            <li className="cursor-pointer">Github</li>
-            <li className="cursor-pointer">Instagram</li>
+            <a href="https://www.linkedin.com/in/simon-franco-angarita-55b1a0a4/">
+              <li className="cursor-pointer">LinkedIn</li>
+            </a>
+            <a href="https://github.com/zadmin88">
+              <li className="cursor-pointer">Github</li>
+            </a>
+            <a href="https://www.instagram.com/zaimon988/">
+              <li className="cursor-pointer">Instagram</li>
+            </a>
           </ul>
         </div>
       </div>

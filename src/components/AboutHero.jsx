@@ -1,22 +1,3 @@
-// import {
-//   Animator,
-//   ScrollPage,
-//   batch,
-//   Fade,
-//   FadeUp,
-//   FadeIn,
-//   FadeOut,
-//   Move,
-//   MoveIn,
-//   MoveOut,
-//   Sticky,
-//   StickyIn,
-//   StickyOut,
-//   Zoom,
-//   ZoomIn,
-//   ZoomOut,
-// } from "react-scroll-motion";
-
 const AboutHero = () => {
   return (
     // <ScrollPage>
@@ -26,13 +7,13 @@ const AboutHero = () => {
     >
       <div className="w-full md:w-1/2 md:pl-8 flex flex-col lg:flex-row items-center ">
         {/* Small screens */}
-        <div className="w-full md:w-[640p] block md:hidden ">
-          <img src="./images/aboutImage.png" alt="Simon" className="" />
-          <div className="  bg-opacity-20 dark:bg-opacity-10 bg-black"></div>
+        <div className="w-full md:w-[640p] block relative md:hidden ">
+          <img src="./images/aboutImage.jpg" alt="Simon" className="" />
+          <div className="absolute inset-0 bg-black bg-opacity-40 md:hidden "></div>
         </div>
         {/* Large screens */}
 
-        <div className="dark:text-stone-200 text-zinc-900 px-6 lg:px-0  lg:absolute  lg:left-[370px] z-40 hidden md:block ">
+        <div className="dark:text-stone-200 text-zinc-900 px-6 lg:px-0  lg:absolute  lg:left-20 md:left-10 sm:left-8 z-40 hidden md:block ">
           <p className=" flex flex-col gap-4 text-4xl md:text-6xl font-semibold mb-4 ">
             <span>Hello.</span>
             <span>
@@ -54,7 +35,7 @@ const AboutHero = () => {
         </div>
 
         {/* Small screens */}
-        <div className="dark:text-stone-200 text-zinc-900 px-6 lg:px-0 relative -top-[130px]  lg:absolute  lg:left-[370px]  md:hidden">
+        <div className="dark:text-stone-200 text-zinc-900 px-6 relative -top-[130px]    md:hidden">
           <p className=" flex flex-col gap-1 text-4xl md:text-6xl font-semibold mb-4 ">
             <span>Hello.</span>
             <span>
@@ -76,9 +57,9 @@ const AboutHero = () => {
         </div>
       </div>
       {/* Large screens */}
-      <div className="w-full md:w-[640p] hidden md:block ">
-        <img src="./images/aboutImage.png" alt="Simon" className="" />
-        <div className=" bg-opacity-75 dark:bg-opacity-10 dark:bg-black"></div>
+      <div className="w-full md:w-[640p] hidden md:block md:relative">
+        <img src="./images/aboutImage.jpg" alt="Simon" className="" />
+        <div className="md:absolute md:inset-0 md:bg-black md:bg-opacity-20 "></div>
       </div>
     </div>
     // </ScrollPage>

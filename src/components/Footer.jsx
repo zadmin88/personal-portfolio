@@ -1,8 +1,10 @@
 import Container from "./Container";
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
   const [dateState, setDateState] = useState(new Date());
+  const location = useLocation();
 
   useEffect(() => {
     setInterval(() => setDateState(new Date()), 1000);
@@ -31,7 +33,7 @@ const Footer = () => {
         md:gap-0
       "
           >
-            <h1 className="  font-extralight text-lg md:text-2xl hidden md:block">
+            <h1 className="  font-extralight text-lg md:text-lg hidden md:block">
               2023
             </h1>
             <p className="md:text-base text-sm">
@@ -44,7 +46,11 @@ const Footer = () => {
               })}{" "}
               in Medellin, Colombia
             </p>
-            <button onClick={() => handleClickScroll("top")}>
+            <button
+              onClick={() =>
+                handleClickScroll(location.pathname === "/" ? "top" : "topWork")
+              }
+            >
               Back to top
             </button>
           </div>

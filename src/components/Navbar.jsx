@@ -84,7 +84,7 @@ const Navbar = () => {
               <ul className="flex gap-10 font-semibold text-base text-zinc-900 dark:text-stone-200">
                 <li
                   className="cursor-pointer tracking-widest"
-                  onClick={() => handleHome()}
+                  onClick={() => navigate(-1)}
                 >
                   <WavyText text="HOME" />
                 </li>

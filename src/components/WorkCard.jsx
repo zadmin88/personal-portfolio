@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useNavigate } from "react-router-dom";
 import { useState, useCallback, useEffect } from "react";
+import { Button } from "./Button";
 
 function WorkCard({ project }) {
   const [imgSrc, setImgSrc] = useState(project.cardUrl[0]);
@@ -12,8 +13,9 @@ function WorkCard({ project }) {
       clearInterval(intervalId);
     }
 
-    if (project.cardUrl.length > 2)
+    if (project.cardUrl.length > 2) {
       setImageIndex((prevIndex) => (prevIndex + 1) % project.cardUrl.length);
+    }
 
     const newIntervalId = setInterval(() => {
       setImageIndex((prevIndex) => (prevIndex + 1) % project.cardUrl.length);
@@ -49,12 +51,14 @@ function WorkCard({ project }) {
               src={imgSrc}
               alt="Work card"
             />
-            <button
-              onClick={() => navigate(`/work/${project.id}`)}
-              className="dark:bg-lime-300 bg-lime-500 rounded-full py-3 px-4 font-semibold absolute bottom-6 right-6 hover:bg-lime-200"
-            >
-              Learn more
-            </button>
+            <div className="absolute bottom-6 right-6">
+              {" "}
+              <Button
+                label={"Learn more"}
+                color={"green"}
+                action={() => navigate(`/work/${project.id}`)}
+              />
+            </div>
           </div>
         </div>
       </div>

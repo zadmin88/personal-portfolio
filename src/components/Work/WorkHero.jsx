@@ -1,7 +1,10 @@
 // eslint-disable-next-line react/prop-types
 const WorkHero = ({ img, name, subtitle }) => {
   return (
-    <div className="font-Monserrat relative  md:h-screen w-full h-full">
+    <div
+      id="topWork"
+      className="font-Monserrat relative  md:h-screen w-full h-full"
+    >
       <img
         src={img}
         alt="Hero"
