@@ -64,7 +64,7 @@ const MenuModal = () => {
                 >
                   SCREENSHOTS
                 </li>
-                <li className="cursor-pointer pt-1">
+                <li className="pt-1">
                   <ToggleDarkmode />
                 </li>
               </ul>
@@ -88,7 +88,7 @@ const MenuModal = () => {
                 >
                   CONTACT
                 </li>
-                <li className="cursor-pointer pt-1">
+                <li className="pt-1">
                   <ToggleDarkmode />
                 </li>
               </ul>

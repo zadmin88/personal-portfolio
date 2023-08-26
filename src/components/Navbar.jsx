@@ -75,10 +75,9 @@ const Navbar = () => {
                   <WavyText text="CONTACT" />
                   {/* <WordAnimation>CONTACT</WordAnimation> */}
                 </li>
-                <li className="cursor-pointer pt-1">
+                <li className="pt-1">
                   <ToggleDarkmode />
                 </li>
-                {/* <li className="cursor-pointer tracking-widest ">EN/ES</li> */}
               </ul>
             ) : (
               <ul className="flex gap-10 font-semibold text-base text-zinc-900 dark:text-stone-200">
@@ -109,10 +108,9 @@ const Navbar = () => {
                   <WavyText text="SCREENSHOTS" />
                 </li>
 
-                <li className="cursor-pointer pt-1">
+                <li className="pt-1">
                   <ToggleDarkmode />
                 </li>
-                {/* <li className="cursor-pointer tracking-widest ">EN/ES</li> */}
               </ul>
             )}
           </div>
