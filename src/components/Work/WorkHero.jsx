@@ -15,7 +15,7 @@ const WorkHero = ({ img, name, subtitle }) => {
         <h1 className="text-3xl md:text-7xl font-bold text-white tracking-widest">
           {name}
         </h1>
-        <h3 className="text-base md:text-2xl text-lime-300 tracking-widest mt-2">
+        <h3 className="text-base md:text-2xl text-lime-300 tracking-widest mt-4">
           {subtitle}
         </h3>
       </div>

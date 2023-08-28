@@ -8,20 +8,55 @@ const Contact = () => {
         LET&apos;S TALK
       </h1>
       <div className="flex flex-col md:flex-row gap-10 md:gap-32">
-        <div className="dark:text-stone-200 text-zinc-900 text-2xl italic font-extralight w-full">
-          <h2 className=" border-b pb-2">zaimon88@gmail.com</h2>
-          <h2 className="pt-4">+ 57 3007921148</h2>
+        <div className="flex flex-col dark:text-stone-200 text-zinc-900 text-2xl  font-extralight w-full">
+          <div className="flex gap-2 items-center  pb-2">
+            <a
+              href="mailto:zaimon88@gmail.com"
+              className="hover:border-b hover:border-zinc-900 dark:hover:border-stone-200 "
+            >
+              <h2 className=" ">zaimon88@gmail.com</h2>
+            </a>
+          </div>
+
+          <div className="flex gap-2 items-center pt-4 md:self-end">
+            <a
+              href="https://wa.me/573007921148"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:border-b hover:border-zinc-900 dark:hover:border-stone-200 "
+            >
+              <h2 className="">+ 57 3007921148</h2>
+            </a>
+          </div>
         </div>
-        <div className="dark:text-stone-200 text-zinc-900 text-xl font-italic">
+        <div className="dark:text-stone-200 text-zinc-900 text-xl ">
           <ul className="flex flex-col gap-4">
-            <a href="https://www.linkedin.com/in/simon-franco-angarita-55b1a0a4/">
-              <li className="cursor-pointer">LinkedIn</li>
+            <a
+              href="https://www.linkedin.com/in/simon-franco-angarita-55b1a0a4/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <li className="cursor-pointer hover:border-b hover:border-zinc-900 dark:hover:border-stone-200">
+                LinkedIn
+              </li>
             </a>
-            <a href="https://github.com/zadmin88">
-              <li className="cursor-pointer">Github</li>
+            <a
+              href="https://github.com/zadmin88"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <li className="cursor-pointer hover:border-b hover:border-zinc-900 dark:hover:border-stone-200">
+                Github
+              </li>
             </a>
-            <a href="https://www.instagram.com/zaimon988/">
-              <li className="cursor-pointer">Instagram</li>
+            <a
+              href="https://www.instagram.com/zaimon988/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <li className="cursor-pointer hover:border-b hover:border-zinc-900 dark:hover:border-stone-200">
+                Instagram
+              </li>
             </a>
           </ul>
         </div>

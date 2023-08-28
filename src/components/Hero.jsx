@@ -13,8 +13,8 @@ const Hero = () => {
         </h1>
 
         <LoopingTextAnimation
-          text={`\u00A0FRONTEND - FULL STACK CAPABLE - FRONTEND - FULL STACK CAPABLE - FRONTEND - FULL STACK CAPABLE -`}
-          speed={10}
+          text={`\u00A0FRONTEND - FULL STACK CAPABLE - FRONTEND - FULL STACK CAPABLE - FRONTEND - FULL STACK CAPABLE - FRONTEND - FULL STACK CAPABLE - FRONTEND - FULL STACK CAPABLE -`}
+          speed={13}
         />
       </div>
     </div>

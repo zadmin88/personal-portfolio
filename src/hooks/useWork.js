@@ -1,7 +1,8 @@
 const testProjects = [
   {
-    id: "1",
+    id: "montanera",
     heroUrl: "/images/work/montanera/heroMontanera.png",
+    liveDemo: "https://montanera-store.web.app/",
     cardUrl: [
       "/images/work/montanera/slideOne.png",
       "/images/work/montanera/slideTwo.png",
@@ -27,11 +28,11 @@ const testProjects = [
     ],
     videoURL: true,
     approachSrc: "/images/work/montanera/approachImage.gif",
-    name: "LA MONTAÑERA",
-    subtitle: "YEAR: 2019 / ROLE: FULLSTACK",
+    name: "La Montañera",
+    subtitle: "YEAR: 2022 / ROLE: FULLSTACK",
     shortDescription:
       "Dynamic e-commerce platform for selling craft beer with an integrated dashboard for inventory and sales management  ",
-    stackUsed: ["Angular", "Tailwind", "Firebase"],
+    stackUsed: ["Angular", "Firebase", "Tailwind"],
     stackDescription:
       "Dynamic e-commerce platform for selling craft beer with an integrated dashboard for inventory and sales management ",
     whatWeDid: [
@@ -51,8 +52,9 @@ const testProjects = [
       "Angular-based craft beer e-commerce app enriched with Firebase and NgRx to deliver a seamless user experience. Employ Firebase's backend-as-a-service suite, integrating Firestore for structured data storage, Firebase Authentication for secure user management, and Firebase Hosting for easy deployment. Utilize NgRx for sophisticated state management, ensuring synchronized data flow and enabling real-time updates. Implement responsive design principles with Tailwind CSS to ensure optimal display across devices. The admin dashboard, empowered by Firestore's real-time capabilities, provides inventory control and sales insights.",
   },
   {
-    id: "2",
+    id: "mymoney",
     heroUrl: "/images/work/mymoney/heroMymoney.png",
+    liveDemo: "https://nextjs-mymoney.vercel.app/",
     cardUrl: [
       "/images/work/mymoney/slideOne.png",
       "/images/work/mymoney/slideTwo.png",
@@ -86,9 +88,10 @@ const testProjects = [
     approachSrc: "/images/work/mymoney/approachImage.gif",
     name: "MyMoney",
     subtitle: "YEAR: 2022 / ROL: FULLSTACK",
+
     shortDescription:
       "MyMoney web app is a user-friendly and efficient tool designed to streamline expense tracking and management. ",
-    stackUsed: ["Nextjs", "Tailwind", "MongoDB", "Prisma"],
+    stackUsed: ["Nextjs", "MongoDB", "Tailwind", "Prisma"],
     stackDescription:
       "Momiji Life is a new line of skincare products, based on the Korean philosophy and produced by Momiji. For the launch of this new product line, Momiji temporarily replaces the brand's main page as part of its promotion strategy.",
     whatWeDid: [

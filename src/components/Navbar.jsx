@@ -29,7 +29,7 @@ const Navbar = () => {
     navigate("/");
     handleClickScroll("top");
   };
-
+  console.log(location.pathname);
   return (
     <div className=" fixed  font-Monserrat h-20 bg-stone-200 dark:bg-zinc-900 z-50">
       <div className="py-6">
@@ -53,7 +53,40 @@ const Navbar = () => {
             >
               Simón Franco
             </h1>
-            {location.pathname === "/" ? (
+            {location.pathname.includes("work") ? (
+              <ul className="flex gap-10 font-semibold text-base text-zinc-900 dark:text-stone-200">
+                <li
+                  className="cursor-pointer tracking-widest"
+                  onClick={() => navigate(-1)}
+                >
+                  <WavyText text="HOME" />
+                </li>
+                <li
+                  className="cursor-pointer tracking-widest"
+                  onClick={() => handleClickScroll("description")}
+                >
+                  <WavyText text="DESCRIPTION" />
+                </li>
+
+                <li
+                  className="cursor-pointer tracking-widest"
+                  onClick={() => handleClickScroll("approach")}
+                >
+                  <WavyText text="APPROACH" />
+                </li>
+
+                <li
+                  className="cursor-pointer tracking-widest"
+                  onClick={() => handleClickScroll("screenshots")}
+                >
+                  <WavyText text="SCREENSHOTS" />
+                </li>
+
+                <li className="pt-1">
+                  <ToggleDarkmode />
+                </li>
+              </ul>
+            ) : location.pathname === "/" ? (
               <ul className="flex gap-10 font-semibold text-base text-zinc-900 dark:text-stone-200">
                 <li
                   className="cursor-pointer tracking-widest"
@@ -87,27 +120,6 @@ const Navbar = () => {
                 >
                   <WavyText text="HOME" />
                 </li>
-                <li
-                  className="cursor-pointer tracking-widest"
-                  onClick={() => handleClickScroll("description")}
-                >
-                  <WavyText text="DESCRIPTION" />
-                </li>
-
-                <li
-                  className="cursor-pointer tracking-widest"
-                  onClick={() => handleClickScroll("approach")}
-                >
-                  <WavyText text="APPROACH" />
-                </li>
-
-                <li
-                  className="cursor-pointer tracking-widest"
-                  onClick={() => handleClickScroll("screenshots")}
-                >
-                  <WavyText text="SCREENSHOTS" />
-                </li>
-
                 <li className="pt-1">
                   <ToggleDarkmode />
                 </li>

@@ -5,7 +5,11 @@ import "react-image-gallery/styles/css/image-gallery.css";
 const ImageCarousel = ({ images }) => {
   return (
     <div id="screenshots">
-      <ImageGallery items={images} />
+      <ImageGallery
+        items={images}
+        showFullscreenButton={false}
+        showPlayButton={false}
+      />
     </div>
   );
 };

@@ -1,14 +1,15 @@
 import Container from "./Container";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import Clock from "react-live-clock";
 
 const Footer = () => {
-  const [dateState, setDateState] = useState(new Date());
+  // const [dateState, setDateState] = useState(new Date());
   const location = useLocation();
 
-  useEffect(() => {
-    setInterval(() => setDateState(new Date()), 1000);
-  }, []);
+  // useEffect(() => {
+  //   setInterval(() => setDateState(new Date()), 1000);
+  // }, []);
 
   const handleClickScroll = (id) => {
     const element = document.getElementById(id);
@@ -38,12 +39,11 @@ const Footer = () => {
             </h1>
             <p className="md:text-base text-sm">
               It&apos;s{" "}
-              {dateState.toLocaleString("en-US", {
-                hour: "numeric",
-                minute: "numeric",
-                second: "numeric",
-                hour12: false,
-              })}{" "}
+              <Clock
+                format={"HH:mm:ss"}
+                ticking={true}
+                timezone={"America/Bogota"}
+              />{" "}
               in Medellin, Colombia
             </p>
             <button

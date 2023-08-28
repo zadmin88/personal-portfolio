@@ -21,7 +21,10 @@ const Work = () => {
         name={project.name}
         subtitle={project.subtitle}
       />
-      <Description description={project.shortDescription} />
+      <Description
+        description={project.shortDescription}
+        liveDemo={project.liveDemo}
+      />
       <Summary
         objective={project.objective}
         whatWeDid={project.whatWeDid}

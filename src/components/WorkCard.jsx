@@ -47,7 +47,7 @@ function WorkCard({ project }) {
         <div className="max-w-[600px] overflow-hidden">
           <div className="max-w-[600px] max-h-[600px] overflow-hidden">
             <img
-              className="relative hover:scale-110 transition duration-500 cursor-pointer object-cover"
+              className="relative hover:scale-110 transition duration-500  object-cover"
               src={imgSrc}
               alt="Work card"
             />
@@ -66,9 +66,15 @@ function WorkCard({ project }) {
         <h2 className="text-xl md:text-3xl font-semibold w-1/2 place-self-start">
           {project?.name}
         </h2>
-        <p className="font-extraligth text-sm md:text-base w-1/2 ">
-          {project?.shortDescription}
-        </p>
+
+        <div className="w-1/2">
+          <h2 className="text-sm font-semibold md:font-bold md:text-xl mb-3 ">
+            {`${project.stackUsed[0]} ${project.stackUsed[1]} ${project.stackUsed[2]}`}
+          </h2>
+          <p className="font-extraligth text-sm md:text-base  ">
+            {project?.shortDescription}
+          </p>
+        </div>
       </div>
     </div>
   );
