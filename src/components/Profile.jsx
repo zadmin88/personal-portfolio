@@ -42,7 +42,11 @@ const Profile = () => {
             CV
           </button> */}
         </a>
-        <a href="https://www.linkedin.com/in/simon-franco-angarita-55b1a0a4/">
+        <a
+          href="https://www.linkedin.com/in/simon-franco-angarita-55b1a0a4/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <Button label={"LinkedIn"} color={"green"} />
         </a>
       </div>
